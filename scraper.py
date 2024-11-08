@@ -7,6 +7,7 @@ class Speedtest(Selenium):
         self.scrape()
 
     def scrape(self):
+        print("Loading,Please Wait")
         time.sleep(15)
         try:
             speed = self.text(By.XPATH,'//div[@id="speed-value"]')

@@ -13,7 +13,7 @@ class Speedtest(Selenium):
             speed = self.text(By.XPATH,'//div[@id="speed-value"]')
             speed_unit = self.text(By.XPATH,'//div[@id="speed-units"]')
             print(speed,speed_unit)
-        except:
+        except NoSuchElementException:
             print("Your internet is too Slow")
 
 

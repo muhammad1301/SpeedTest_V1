@@ -1,6 +1,6 @@
 from scraper import Speedtest
 
-HEADLESS = False
+HEADLESS = True
 
 
 def main():

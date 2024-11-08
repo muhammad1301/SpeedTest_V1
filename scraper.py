@@ -8,8 +8,11 @@ class Speedtest(Selenium):
 
     def scrape(self):
         time.sleep(15)
-        speed = self.text(By.XPATH,'//div[@id="speed-value"]')
-        speed_unit = self.text(By.XPATH,'//div[@id="speed-units"]')
-        print(speed,speed_unit)
+        try:
+            speed = self.text(By.XPATH,'//div[@id="speed-value"]')
+            speed_unit = self.text(By.XPATH,'//div[@id="speed-units"]')
+            print(speed,speed_unit)
+        except:
+            print("Your internet is too Slow")
 
 

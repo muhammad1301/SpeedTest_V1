@@ -15,6 +15,7 @@ class Speedtest(Selenium):
             speed_unit = self.text(By.XPATH,'//div[@id="speed-units"]')
             if speed == 0:
                 print("Try again..")
+                self.scrape()
             else:
                 print(speed,speed_unit)
         except:
